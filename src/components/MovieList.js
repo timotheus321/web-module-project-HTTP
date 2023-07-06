@@ -5,7 +5,7 @@ import MovieFooter from './MovieFooter';
 import FavoriteMovieList from './FavoriteMovieList';
 
 const MovieList = (props) => {
-  const { movies, favoriteMovies } = props;
+  const { movies, addToFavorites } = props;
 
   return (
     <div className="col">
@@ -22,7 +22,7 @@ const MovieList = (props) => {
 
         <tbody>
           {
-            movies.map(movie => <MovieListItem key={movie.id} movie={movie} />)
+            movies.map(movie => <MovieListItem key={movie.id} movie={movie} addToFavorites={addToFavorites}/>)
           }
         </tbody>
       </table>
